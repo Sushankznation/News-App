@@ -7,12 +7,12 @@
 ------------
 
 ## Screeenshots 📇
-![image](https://user-images.githubusercontent.com/102636327/195967109-a0db0394-e30d-42e6-8167-373e8d7a41d9.png)
+![Annotation (2)](https://user-images.githubusercontent.com/102636327/196757877-3facb1e8-5c98-47d7-b6e6-2c73211c6e39.png)
 
 ------------
 
 ### Video View 🎥
-- https://www.loom.com/share/5f67267d3df240fb86035f6ad42e21af
+- [https://www.loom.com/share/5f67267d3df240fb86035f6ad42e21af](https://www.loom.com/share/c0e2f58e750b4d7fb6f5d76695a4deab)
 
 ------------
 
