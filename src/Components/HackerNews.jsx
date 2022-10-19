@@ -81,10 +81,12 @@ function HackerNews() {
         <ul>
           {show.map((val, index) => (
             <li key={val.objectID}>
-              <a href={val.url}>{val.title} </a>
+              <a>{val.title} </a>
               <br />
               <button className="link_btn">
-                <a href={val.url}>Read More</a>
+                <a href={val.url} target="_blank">
+                  Read More
+                </a>
               </button>
               <button
                 className="del_btn"
