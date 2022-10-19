@@ -2,12 +2,13 @@
   margin: 0%;
   padding: 0%;
   color: white;
+  font-family: Tahoma (sans-serif);
 }
 body {
   background-color: #e1e2e2;
 }
 .container {
-  font-family: MV Boli;
+  font-family: Trebuchet MS (sans-serif);
   text-align: center;
   height: 90vh;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -99,11 +100,10 @@ li {
   border-radius: 5px;
   width: 400px;
   opacity: 0.8;
-  margin: 1%;
+  margin: 0.5%;
   color: white;
   font-weight: bolder;
-  padding: 1%;
-  margin-bottom: 2%;
+  padding: 2% 2% 0% 1%;
 }
 img {
   margin-top: 0%;
@@ -133,6 +133,7 @@ a {
 }
 
 .link_btn {
+  height: 30px;
   width: 30%;
 }
 .link_btn:hover {
@@ -142,7 +143,7 @@ a {
 @media (max-width: 600px) {
   button {
     margin-top: 5%;
-    width: 80%;
+    width: 90%;
     font-size: 10px;
   }
   img {
@@ -158,5 +159,8 @@ a {
     height: 8vh;
     background-color: white;
     color: aliceblue;
+  }
+  li {
+    padding-top: 5%;
   }
 }
