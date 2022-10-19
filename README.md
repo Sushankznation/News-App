@@ -2,7 +2,7 @@
 ------------
 
 ## Description 🤙
-- Created Text Utility app using React JS  & Bootstrap , this app consist of conditional re-rendering of different react components and saves users bandwidth.
+-  A News app which is fetching data from an API
 
 ------------
 
