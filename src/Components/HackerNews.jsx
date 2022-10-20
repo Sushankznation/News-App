@@ -87,9 +87,9 @@ function HackerNews() {
           {show.map((val, index) => (
             <li key={val.objectID}>
               <a>{val.title} </a>
-              <a>{val.time} </a>
               <br />
-              {/* <li>{val.time} </li> */}
+              {/* {Date.parse(val.created_at)} */}
+              {Date.prototype.getDate(val.created_at)}
               <button className="link_btn">
                 <a href={val.url} target="_blank">
                   Read More
