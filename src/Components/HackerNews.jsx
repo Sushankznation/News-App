@@ -28,6 +28,7 @@ function HackerNews() {
         `https://hn.algolia.com/api/v1/search?query=${query}`
       );
       setShow(response.data.hits);
+      searchInputRef.current.focus();
     } catch (err) {
       setError(err);
     }
@@ -74,7 +75,7 @@ function HackerNews() {
           clear
         </button>
         <h4>
-          <i> Results: </i> {previewResult}
+          <i> Results for: </i> {previewResult}
         </h4>
       </form>
       {Loading ? (
@@ -88,21 +89,22 @@ function HackerNews() {
             <li key={val.objectID}>
               <a>{val.title} </a>
               <br />
-              {/* {Date.parse(val.created_at)} */}
-              {Date.prototype.getDate(val.created_at)}
-              <button className="link_btn">
-                <a href={val.url} target="_blank">
-                  Read More
-                </a>
-              </button>
-              <button
-                className="del_btn"
-                onClick={() => {
-                  deleteHandler(index);
-                }}
-              >
-                <i className="fa fa-trash-o"></i>
-              </button>
+              <div className="row">
+                <p className="Date"> Date : {val.created_at.slice(0, 10)} </p>
+                <button className="link_btn">
+                  <a href={val.url} target="_blank">
+                    Read More
+                  </a>
+                </button>
+                <button
+                  className="del_btn"
+                  onClick={() => {
+                    deleteHandler(index);
+                  }}
+                >
+                  <i className="fa fa-trash-o"></i>
+                </button>
+              </div>
             </li>
           ))}
         </ul>
