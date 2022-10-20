@@ -4,9 +4,10 @@ import Heading from "../Assets/heading.jpg";
 import "./styles.css";
 function HackerNews() {
   const [show, setShow] = useState([]);
-  const [query, setQuery] = useState("React");
+  const [query, setQuery] = useState("");
   const [Loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [previewResult, setpreviewResult] = useState("Top News");
   const searchInputRef = useRef();
   // using useRef so that if user click on clear
   //then his cursor should automatically focus on input Area
@@ -35,14 +36,18 @@ function HackerNews() {
   //Clear Input Field
   const ClearHnadler = () => {
     setQuery("");
+    results("");
+    setShow("");
     //if I click on clear button then it will
     //Focus on input field immediately
     searchInputRef.current.focus();
+    setpreviewResult("Top News");
   };
   //On Enter Handler
   const submitHandler = (event) => {
     event.preventDefault();
     results();
+    setpreviewResult(query);
   };
   // Delete Items
   const deleteHandler = (index) => {
@@ -69,7 +74,7 @@ function HackerNews() {
           clear
         </button>
         <h4>
-          <i> Results: </i> {query}{" "}
+          <i> Results: </i> {previewResult}
         </h4>
       </form>
       {Loading ? (
@@ -82,7 +87,9 @@ function HackerNews() {
           {show.map((val, index) => (
             <li key={val.objectID}>
               <a>{val.title} </a>
+              <a>{val.time} </a>
               <br />
+              {/* <li>{val.time} </li> */}
               <button className="link_btn">
                 <a href={val.url} target="_blank">
                   Read More
