@@ -38,9 +38,8 @@ function HackerNews() {
   const ClearHnadler = () => {
     setQuery("");
     results("");
-    setShow([]);
-    //if I click on clear button then it will
-    //Focus on input field immediately
+    setShow(response.data.hits);
+    //Focus on input field immediately by useRef
     searchInputRef.current.focus();
     setpreviewResult("Top News");
   };
@@ -56,6 +55,7 @@ function HackerNews() {
     newArr.splice(index, 1);
     setShow(newArr);
   };
+
   // Sorted results
   const getSortedResults = (arr, sortKey) => {
     let newArr = [...arr];
