@@ -1,8 +1,8 @@
-# NewsApp
+# Hacker News
 ------------
 
 ## Description 🤙
--  A News app which is fetching data from an API
+-  A News app which is fetching data from Hacker News API. Added a search bar to search the News within the app.
 
 ------------
 
