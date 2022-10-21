@@ -43,7 +43,7 @@ function HackerNews() {
     searchInputRef.current.focus();
     setpreviewResult("Top News");
   };
-  //On Enter Handler
+  //On Enter handler
   const submitHandler = (event) => {
     event.preventDefault();
     results();
