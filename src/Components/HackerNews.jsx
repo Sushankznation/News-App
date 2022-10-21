@@ -38,7 +38,7 @@ function HackerNews() {
   const ClearHnadler = () => {
     setQuery("");
     results("");
-    setShow("");
+    setShow([]);
     //if I click on clear button then it will
     //Focus on input field immediately
     searchInputRef.current.focus();
@@ -55,6 +55,14 @@ function HackerNews() {
     const newArr = [...show];
     newArr.splice(index, 1);
     setShow(newArr);
+  };
+  // Sorted results
+  const getSortedResults = (arr, sortKey) => {
+    let newArr = [...arr];
+    newArr.sort((a, b) => {
+      return b[sortKey] - a[sortKey];
+    });
+    return newArr;
   };
   return (
     <div className="container">
@@ -85,7 +93,7 @@ function HackerNews() {
         />
       ) : (
         <ul>
-          {show.map((val, index) => (
+          {getSortedResults(show, "created_at_i").map((val, index) => (
             <li key={val.objectID}>
               <a>{val.title} </a>
               <br />
