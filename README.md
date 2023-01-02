@@ -17,7 +17,7 @@
 ------------
 
 ### Host Link 🔗
--https://newsapp-three-pi.vercel.app/
+- https://newsapp-three-pi.vercel.app/
 
 ------------
 
