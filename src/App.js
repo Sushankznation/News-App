@@ -1,10 +1,15 @@
-import "./styles.css";
-import HackerNews from "./Components/HackerNews";
-export default function App() {
+import React from 'react'
+import SearchForm from './SearchForm'
+import Stories from './Stories'
+import Buttons from './Buttons'
+function App() {
   return (
-    <div className="App">
-      <HackerNews />
-    </div>
-  );
-  // Hello
+    <>
+      <SearchForm />
+      <Buttons />
+      <Stories />
+    </>
+  )
 }
+
+export default App
